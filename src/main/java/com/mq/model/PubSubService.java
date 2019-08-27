@@ -7,23 +7,28 @@ import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.core.env.Environment;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
-@Service
+//@Service
 public class PubSubService {
 	
 	@Autowired
 	private RabbitTemplate rabbitTemplate;
 	
-	@Value("${value}")
+	@Autowired
+	private Environment env;
+	
+	@Value("${key}")
 	private String msg;
 	
 	
 	@Scheduled(fixedRate=1000)
 	public void sendMessage() {
 		rabbitTemplate.convertAndSend("mq.fanout", "", new Date());
-		System.out.println("message : " + msg);
+//		System.out.println("message : " + msg);
+//		System.out.println("message : " + env.getProperty("company"));
 		System.out.println("pub server Send Message !");
 	}
 	
