@@ -10,6 +10,9 @@ Testing pub/sub with RabbitMQ server
 ## Function  
  > Work Queue  
  > Publish / Subscribe  
+ > Routing  
+ > Topic  
+ > RPC  
   
 ## how to use gradleDeploy.bat and gradleDebugDeploy.bat  
  1.set environment variable TOMCAT_HOME to your tomcat install location (ex:D:\apache-tomcat-9.0.22)  
