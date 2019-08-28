@@ -1,13 +1,13 @@
 # RabbitMQ  
-Testing pub/sub with RabbitMQ server   
+Testing 5 major function on RabbitMQ server w/ or w/o Spring AMQP framework   
   
 ## Environment  
  > Project: Gradle  
- > Framework: Spring MVC + Spring AMQP + Spring AMQP Rabbit  
+ > Framework: Spring MVC + Spring AMQP + Spring AMQP Rabbit + AMQP-Client API(RabbitMQ Java library)  
  > Server: Tomcat v9.0  
  > MQ Server: RabbitMQ  
   
-## Function  
+## Function (implement both Spring AMQP and RabbitMQ java library)  
  > Work Queue  
  > Publish / Subscribe  
  > Routing  
